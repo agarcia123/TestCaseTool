@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+  <style>
+thead {color:green;}
+tbody {color:blue;}
+tfoot {color:red;}
+
+th, td {
+   padding: 10px;
+}
+</style>
+</head>
+<body>
+  Enter a new Test case
+
+
+<form action="/inputtst" method="POST">
+  <textarea rows="4" cols="50" placeholder="steps" name="steps"></textarea>
+  <p></p>
+  <textarea rows="4" cols="50" placeholder="expectedres" name="expectedres"></textarea>
+  <p></p>
+  <input type="text" placeholder="description" name="description">
+  <input type="text" placeholder="type" name="type">
+  <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

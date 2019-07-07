@@ -1,0 +1,7 @@
+thead {color:green;}
+tbody {color:blue;}
+tfoot {color:red;}
+
+th, td {
+   padding: 10px;
+}

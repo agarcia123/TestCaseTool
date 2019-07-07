@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test case app</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css">
+
+</head>
+<body>
+<h2>List of test cases</h2>
+<form  method="get">
+  <table class="tests">
+  <thead><tr><th>Number</th><th>Description</th><th>Type</th></tr></thead>
+  <tbody>
+  <% for(var i=0; i<tests.length; i++) {%>
+    <tr class="test">
+      <td><%= i+1 %></td>
+      <td><a href ="detailtst?id=<%=tests[i]._id%>" ><%= tests[i].description %></a></td>
+      <td><%= tests[i].type %></td>
+      <td><a href ="delete?id=<%=tests[i]._id%>" ><img src="/assets/trashcan.png" height="30" width="30"></a></td>
+    </tr>
+  <% } %>
+  </tbody>
+  </table>
+  <button type="submit" formaction="/run">Create run</button>
+  <input type="text" placeholder="run name" name="run">
+</form>
+  <form action="/inputtst" method="get">
+    <button type="submit" formaction="/inputtst">Enter a new test </button>
+  </form>
+
+
+
+</body>
+</html>
