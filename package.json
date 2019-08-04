@@ -13,12 +13,14 @@
   "author": "augusto garcia",
   "license": "ISC",
   "dependencies": {
+    "alert-node": "^1.2.6",
     "body-parser": "^1.19.0",
     "ejs": "^2.6.1",
     "express": "^4.17.1",
     "mongo": "^0.1.0",
     "mongocli": "0.0.1",
-    "mongodb": "^3.2.7"
+    "mongodb": "^3.2.7",
+    "popups": "^1.1.3"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
