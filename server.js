@@ -31,8 +31,8 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-
-  const uri = `mongodb+srv://${req.body.user_name}:L%40ugus66@test-cases-db-oanhd.mongodb.net/test?retryWrites=true&w=majority`;
+  //L%40ugus66
+  const uri = `mongodb+srv://${req.body.user_name}:${req.body.password}@test-cases-db-oanhd.mongodb.net/test?retryWrites=true&w=majority`;
   const client = new MongoClient(uri, { useNewUrlParser: true });
   client.connect(err => {
      if (err) {

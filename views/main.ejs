@@ -7,7 +7,9 @@
 
 </head>
 <body>
+<button type="submit" formaction="/logout" class="right"><img src="/assets/logout.png" height="30" width="30"></button>  
 <h2>List of test cases</h2>
+<div class="test_list">
 <form  method="get">
   <table class="tests">
   <thead><tr><th>Number</th><th>Description</th><th>Type</th></tr></thead>
@@ -22,12 +24,18 @@
   <% } %>
   </tbody>
   </table>
-  <button type="submit" formaction="/run">Create run</button>
-  <input type="text" placeholder="run name" name="run">
+
 </form>
-  <form action="/inputtst" method="get">
-    <button type="submit" formaction="/inputtst">Enter a new test </button>
-  </form>
+</div>
+<form method="get">
+  <button type="submit" formaction="/inputtst">Enter a new test </button>
+  <button type="submit" formaction="/details">View all with details </button>
+</form>
+</p>
+<button type="submit" formaction="/run">Create run</button>
+<input type="text" placeholder="run name" name="run">
+</p>
+
 
 
 

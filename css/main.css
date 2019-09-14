@@ -1,3 +1,25 @@
+body {
+  background-color: lightblue;
+}
+
+div {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
+.test_list {
+  margin-left: 150px;
+}
+
+.right {
+  position: absolute;
+  right: 40px;
+  width: 70px;
+  padding: 10px;
+}
+
 thead {color:green;}
 tbody {color:blue;}
 tfoot {color:red;}
