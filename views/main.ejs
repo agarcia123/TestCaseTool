@@ -7,35 +7,40 @@
 
 </head>
 <body>
-<button type="submit" formaction="/logout" class="right"><img src="/assets/logout.png" height="30" width="30"></button>  
+<button type="submit" formaction="/logout" class="right"><img src="/assets/logout.png" height="30" width="30"></button>
 <h2>List of test cases</h2>
+<form method="get">
+  <table>
+  <tr>
+  <td><button type="submit" formaction="/inputtst">Enter a new test </button></td>
+  <td><button type="submit" formaction="/details">View all with details </button></td>
+  <td>Search<input type="text" placeholder="search"></td>
+</tr>
+</table>
+</form>
 <div class="test_list">
-<form  method="get">
   <table class="tests">
   <thead><tr><th>Number</th><th>Description</th><th>Type</th></tr></thead>
   <tbody>
   <% for(var i=0; i<tests.length; i++) {%>
     <tr class="test">
       <td><%= i+1 %></td>
-      <td><a href ="detailtst?id=<%=tests[i]._id%>" ><%= tests[i].description %></a></td>
+      <td><%= tests[i].description %></a></td>
       <td><%= tests[i].type %></td>
       <td><a href ="delete?id=<%=tests[i]._id%>" ><img src="/assets/trashcan.png" height="30" width="30"></a></td>
+      <td><a href ="detailtst?id=<%=tests[i]._id%>" ><img src="/assets/view.png" height="30" width="30"></td>
     </tr>
   <% } %>
   </tbody>
   </table>
-
-</form>
 </div>
 <form method="get">
-  <button type="submit" formaction="/inputtst">Enter a new test </button>
-  <button type="submit" formaction="/details">View all with details </button>
-</form>
 </p>
 <button type="submit" formaction="/run">Create run</button>
+<button type="submit" formaction="/run">View run</button>
 <input type="text" placeholder="run name" name="run">
 </p>
-
+</form>
 
 
 
